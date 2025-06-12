@@ -1,4 +1,8 @@
 Apellido y nombre de los alumnos que participaron:
 Carrascal Augusto (BETA)
-Pérez Juan (ALFA)
-Gómez María (GAMMA)
+Fernandez juan (ALFA Y GAMMA)
+c- ¿Puede GAMMA actualizar su FORK al estado del fork de ALFA?
+   No directamente. GAMMA tendría que agregar como remoto el repositorio de ALFA, hacer fetch y merge si quiere esos cambios.
+
+d- ¿Los datos que tenía en mi repositorio, editados por mí, se pierden si quiero actualizar el fork?
+   No se pierden automáticamente. Si hay conflictos, Git te lo va a avisar y vos decidís cómo resolverlos.
