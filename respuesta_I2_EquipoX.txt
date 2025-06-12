@@ -1,8 +1,54 @@
-Apellido y nombre de los alumnos que participaron:
+﻿Apellido y nombre de los alumnos que participaron:
 Carrascal Augusto (BETA)
 Fernandez juan (ALFA Y GAMMA)
+a - git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+
+b - No, no puede directamente.
+Cada fork es independiente y solo tiene relación directa con el repositorio original (upstream) y su propio fork.
 c- ¿Puede GAMMA actualizar su FORK al estado del fork de ALFA?
+
    No directamente. GAMMA tendría que agregar como remoto el repositorio de ALFA, hacer fetch y merge si quiere esos cambios.
 
 d- ¿Los datos que tenía en mi repositorio, editados por mí, se pierden si quiero actualizar el fork?
    No se pierden automáticamente. Si hay conflictos, Git te lo va a avisar y vos decidís cómo resolverlos.
+e- git clone https://github.com/tu_usuario/TP_SO_i2_Dojo_106.git
+cd TP_SO_i2_Dojo_106
+2. Agregar el repositorio original como remoto upstream
+bash
+Copy
+Edit
+git remote add upstream https://github.com/AugustoCarrascal/TP_SO_i2_Dojo_106.git
+3. Configurar origin para que apunte a tu fork (si es necesario)
+bash
+
+
+git remote set-url origin https://github.com/tu_usuario/TP_SO_i2_Dojo_106.git
+4. Traer cambios del repositorio original
+bash
+
+git fetch upstream
+5. Cambiar a la rama principal
+bash
+
+git checkout main
+6. Fusionar los cambios de upstream a tu rama local
+bash
+
+git merge upstream/main
+7. Subir los cambios a tu fork
+bash
+
+git push origin main
+8. Hacer cambios en el código y commit
+bash
+
+# editar archivos
+git add .
+git commit -m "Descripción del cambio"
+9. Subir los cambios de la rama en la que trabajaste
+bash
+
+git push origin main
